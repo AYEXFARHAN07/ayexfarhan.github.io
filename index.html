@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<HTML LANG="EN">
+    <HEAD>
+        <META CHARSET="UTF-8">
+        <META NAME="VIEWPORT" CONTENT="WIDTH=DEVICE-WIDTH, INITIAL-SCALE=1.0">
+<TITLE>FOR MY SPECIAL PERSON ❤️</TITLE>
+    <STYLE>
+BODY{
+    MARGIN:0;
+    MIN-HEIGHT:100VH;
+    DISPLAY:FLEX;
+    JUSTIFY-CONTENT:CENTER;
+    ALIGN-ITEMS:CENTER;
+    FONT-FAMILY:ARIAL,SANS-SERIF;
+    BACKGROUND:LINEAR-GRADIENT(135DEG,#FFB6C1,#FFE4EC);
+    OVERFLOW:HIDDEN;
+    TEXT-ALIGN:CENTER;
+}
+.CARD{
+    BACKGROUND:RGBA(255,255,255,0.9);
+PADDING:30PX 22PX;
+BORDER-RADIUS:25PX;
+WIDTH:80%;
+MAX-WIDTH:350PX;
+BOX-SHADOW:0 10PX 30PX #E7548050;
+POSITION:RELATIVE;
+Z-INDEX:2;
+}
+H1{COLOR:#E84370;}
+P{COLOR:#65404D;LINE-HEIGHT:1.7;}
+.HEART{FONT-SIZE:65PX;
+ANIMATION:BEAT 1S INFINITE;
+}
+@KEYFRAMES BEAT{50%{TRANSFORM:SCALE(1.2);}}
+button{background:#ff4f81;
+COLOR:WHITE;
+BORDER:NONE;
+PADDING:14PX 22PX;
+BORDER-RADIUS:30PX;
+FONT-SIZE:16PX;
+CURSOR:POINTER;
+}
+#SURPRISE{DISPLAY:NONE;
+COLOR:#84370D;
+FONT-WEIGHT:BOLD;
+MARGIN-TOP:20PX;
+}
+.FLOATING{POSITION:FIXED;
+    BOTTOM:-30PX;
+    ANIMATION:FLOATUP 6S LINEAR FORWARDS;
+    POINTER-EVENTS:NONE;
+}
+@KEYFRAMES FLOATUP{TO{TRANSFORM:TRANSLATEY(-110VH)
+    ROTATE(360DEG);
+    OPACITY:0;
+}
+}
+</STYLE>
+</HEAD>
+<BODY>
+    <DIV CLASS="CARD">
+        <DIV CLASS="HEART">❤️</DIV>
+        <H1>HEY,MY FAVOURITE PERSON!❤️</H1>
+        <P>OUT OF ALL THE PEOPLE IN THIS WORLD,<BR>
+            I AM SO GLAD I GOT TO KNOW YOU🥹🩷
+        </P>
+        <p>YOU MAKE ORDINARY MOMENTS FEEL SPECIAL.
+            NEVER FORGET HOW MUCH YOU MATTER 💕
+        </p>
+        <BUTTON ONCLICK="SHOWLOVE()">
+            OPEN YOUR SURPRISE 💌
+        </BUTTON>
+        <DIV ID="SURPRISE">
+            YOU ARE ONE OF MY FAVOURITE REASONS TO SMILE!😊
+            <BR><BR>
+                SENDING YOU A THOUSAND VIRTUAL HUGS
+                AND HEARTS🩷🩷
+                </DIV>
+            </DIV>
+            <script>
+                function SHOWLOVE(){
+                    document.getElementById("SURPRISE").style.display = "block";
+                    for(let i=0; i<25; i++){
+                        setTimeout(function(){
+                            const HEART = document.createElement("DIV");
+                            HEART.className = "HEART FLOATING";
+                            HEART.innerHTML = "❤️";
+                            HEART.style.left = Math.random() * 100 + "vw";
+                            HEART.style.fontSize = Math.random() * 20 + 10 + "px";
+                            document.body.appendChild(HEART);
+                            setTimeout(function(){
+                                HEART.remove();
+                            },6000);
+                        }, i * 200);
+                    }
+                }
+            </script>
+            </BODY>
+    </HTML>
